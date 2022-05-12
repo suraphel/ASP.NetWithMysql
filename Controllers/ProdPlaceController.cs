@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace mysqltest.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class ProdPlaceController : ControllerBase
     {
@@ -21,17 +21,18 @@ namespace mysqltest.Controllers
         {
             _configuration = configuration;
         }
+        
 
         [HttpGet]
         public JsonResult Get()
        {
             //string query = @" select DepartmentId, DepartmentName from ProdPlace 
             //";
-           string query = @" select produksjonsplassid,kommunenummer,gaardsnummer, bruksnummer, bygningsnummer, koordinater, koordinatsystem from Produksjonsplass Where produksjonsplassid ";           
+           string query = @"select produksjonsplassid,kommunenummer,gaardsnummer, bruksnummer, bygningsnummer, koordinater, koordinatsystem from Produksjonsplass Where produksjonsplassid ";           
          
             // Getting the data into a data table obj
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("Default-connection");
+            string sqlDataSource = _configuration.GetConnectionString("DefaultConnection");
             MySqlDataReader Reader;
 
             using (MySqlConnection mycon = new MySqlConnection(sqlDataSource))
@@ -49,19 +50,18 @@ namespace mysqltest.Controllers
             return new JsonResult(table);
         }
 
-
-        [HttpGet("ListAll/ {id}")]
+        [HttpGet("ListOne/ {id}")]
         public JsonResult Get(int id)
         {
-           // string query = @" select DepartmentId, DepartmentName from ProdPlace where  DepartmentId = @DepartmentId "; 
-            string query = @" select produksjonsplassid, kommunenummer, gaardsnummer, bruksnummer, bygningsnummer, koordinater, koordinatsystem from Produksjonsplass Where produksjonsplassid = @produksjonsplassid ";                                                                                                                                        
+            // string query = @" select DepartmentId, DepartmentName from ProdPlace where  DepartmentId = @DepartmentId "; 
+            string query = @" select produksjonsplassid, kommunenummer, gaardsnummer, bruksnummer, bygningsnummer, koordinater, koordinatsystem from Produksjonsplass Where produksjonsplassid = @produksjonsplassid ";
 
-            
+
             //string query = @" select produksjonsplassid,kommunenummer,gaardsnummer, bruksnummer, bygningsnummer, koordinater, koordinatsystem from Produksjonsplass Where produksjonsplassid   ";
 
             // Getting the data into a data table obj
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("Default-connection");
+            string sqlDataSource = _configuration.GetConnectionString("DefaultConnection");
             MySqlDataReader Reader;
 
             using (MySqlConnection mycon = new MySqlConnection(sqlDataSource))
@@ -83,6 +83,7 @@ namespace mysqltest.Controllers
         }
 
 
+
         [HttpPost]
         //public JsonResult Post(ProdPlaceModel prod)
         public JsonResult Post (Produksjonsplass prod)
@@ -96,7 +97,7 @@ namespace mysqltest.Controllers
             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("Default-connection");
+            string sqlDataSource = _configuration.GetConnectionString("DefaultConnection");
             MySqlDataReader Reader;
 
             using (MySqlConnection mycon = new MySqlConnection(sqlDataSource))
@@ -146,7 +147,7 @@ namespace mysqltest.Controllers
             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("Default-connection");
+            string sqlDataSource = _configuration.GetConnectionString("DefaultConnection");
             MySqlDataReader Reader;
 
             using (MySqlConnection mycon = new MySqlConnection(sqlDataSource))
@@ -188,7 +189,7 @@ namespace mysqltest.Controllers
             ";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("Default-connection");
+            string sqlDataSource = _configuration.GetConnectionString("DefaultConnection");
             MySqlDataReader Reader;
 
             using (MySqlConnection mycon = new MySqlConnection(sqlDataSource))

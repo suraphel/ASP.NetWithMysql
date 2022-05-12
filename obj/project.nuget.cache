@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TTEfdp8diSz44PSN9VawyN+tqzwQt5v8E1wmIPOjZfp84NxStFm/Qa/QyKrbXqhKdsttssq1Br5u2rQJoY3fWw==",
+  "dgSpecHash": "9RwtFvpJCUB4dBrxAqrxPpom3Y07/mjWnizR7md1jjqOZ/JlFZQ7iafVJla5QctZOqZ1Xx3TJVH66e6/n4XOeA==",
   "success": true,
   "projectFilePath": "C:\\Users\\surim\\Desktop\\test\\vs2019\\withMysql\\mysqltest\\mysqltest\\mysqltest.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\surim\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\surim\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\surim\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\surim\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
     "C:\\Users\\surim\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\surim\\.nuget\\packages\\mysql.data\\8.0.29\\mysql.data.8.0.29.nupkg.sha512",
     "C:\\Users\\surim\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",

@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[5.0.17, )"
             },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.11.1, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[8.0.29, )"
